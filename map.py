@@ -31,7 +31,7 @@ def map():
     fg = folium.FeatureGroup(name="Saskatchewan Map")
 
     # Adding multiple marker on the map.
-    # Iterate on the information of the Library.txt file.
+    # Iterate on the information of the SK_Profile.txt file.
     # Then assign to a new variable for easy access.
     for  lat_, lon_, cit_, pop_, crime_, unemp_ in zip(lat, lon, cit, pop, crime, unemp):
         iframe = folium.IFrame(html=html % (cit_, pop_, str(crime_)+"%", str(unemp_)+"%"), width=200, height=100)
