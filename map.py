@@ -2,7 +2,8 @@ import folium
 import pandas
 
 def map():
-    # Access the SK_Profile file
+    
+     # Access the SK_Profile file
     data = pandas.read_csv("SK_Profile.txt")
     lat = list(data["LAT"])
     lon = list(data["LON"])
@@ -21,6 +22,10 @@ def map():
     <br>
     """
 
+    # The map will center it's location to Saskatoon.
+    # The coordinates provided is for Saskatoon.
+    map = folium.Map(location=[52.146973,-106.647034], zoom_started=6, tiles="Stamen Terrain")
+    
     fg = folium.FeatureGroup(name="Saskatchewan Map")
 
     # Adding multiple marker on the map.
@@ -31,3 +36,7 @@ def map():
         fg.add_child(folium.Marker(location = [lat_, lon_], \
                   popup = folium.Popup(iframe),  \
                     icon = folium.Icon(color="green")))
+  
+    map.add_child(fg)
+    map.save("Map_SK.html")
+
