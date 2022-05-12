@@ -9,7 +9,8 @@ def map():
     lon = list(data["LON"])
     cit = list(data["CITY"])
     pop = list(data["POPULATION"])
-    cri = list(data["CRIMERATE"])
+    crime = list(data["CRIMERATE"])
+    unemp = list(data["UNEMPLOYMENT"])
 
     # Adding styles using HTML.
     # Can also add link.
@@ -20,6 +21,7 @@ def map():
     <br>
     Crime Rate: %s
     <br>
+    Unemployment Rate: %s
     """
 
     # The map will center it's location to Saskatoon.
@@ -31,8 +33,8 @@ def map():
     # Adding multiple marker on the map.
     # Iterate on the information of the Library.txt file.
     # Then assign to a new variable for easy access.
-    for  lat_, lon_, cit_, pop_, cri_ in zip(lat, lon, cit, pop, cri):
-        iframe = folium.IFrame(html=html % (cit_, pop_, str(cri_)+"%"), width=200, height=100)
+    for  lat_, lon_, cit_, pop_, crime_, unemp_ in zip(lat, lon, cit, pop, crime, unemp):
+        iframe = folium.IFrame(html=html % (cit_, pop_, str(crime_)+"%", str(unemp_)+"%"), width=200, height=100)
         fg.add_child(folium.Marker(location = [lat_, lon_], \
                   popup = folium.Popup(iframe),  \
                     icon = folium.Icon(color="green")))
