@@ -1,7 +1,9 @@
-This repository will provide some vital information when deciding where to migrate in Saskatchewan.
+This repository will provide some vital information when deciding where to migrate in Saskatchewan. This is a simple application of what I've learned so far in Python.
 
 Link: file:///Users/ericknuque/Desktop/migrate_to_sk/Map_SK.html
 
 1. Main Screen
 
-!["MainScreen"](https://raw.githubusercontent.com/enukeWebDev/where-to-migrate-in-sk/6bc5d94cfb08c88840b72c54e0abc77f53bc122b/images/Screen%20Shot%202022-05-11%20at%2010.41.06%20PM.png)
+!["MainScreen"](https://github.com/enukeWebDev/where-to-migrate-in-sk/blob/main/images/img1.png?raw=true)
+
+!["MainScreen"](https://github.com/enukeWebDev/where-to-migrate-in-sk/blob/main/images/img2.png?raw=true)
