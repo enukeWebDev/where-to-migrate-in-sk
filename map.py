@@ -6,13 +6,13 @@ from markers_info import markers_i
 def map():
     
     # Access the SK_Profile file
-    data = pandas.read_csv("SK_Profile.txt")
-    lat = list(data["LAT"])
-    lon = list(data["LON"])
-    cit = list(data["CITY"])
-    pop = list(data["POPULATION"])
-    crime = list(data["CRIMERATE"])
-    unemp = list(data["UNEMPLOYMENT"])
+    data_ = pandas.read_csv("data/SK_Profile.txt")
+    lat = list(data_["LAT"])
+    lon = list(data_["LON"])
+    cit = list(data_["CITY"])
+    pop = list(data_["POPULATION"])
+    crime = list(data_["CRIMERATE"])
+    unemp = list(data_["UNEMPLOYMENT"])
 
     # The map will center it's location to Saskatoon.
     # The coordinates provided is for Saskatoon.
